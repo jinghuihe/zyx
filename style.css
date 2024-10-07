@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffcccb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 添加这行 */
+    margin: 0; /* 确保没有默认的 body margin */
+}
+
+.container {
+    max-width: 800px; /* 限制最大宽度以防内容太宽 */
+    width: 100%;  /* 让内容填满容器 */
+    margin: 0 auto;  /* 保证容器居中 */
+    background: linear-gradient(135deg, #ffd700, #f08080);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.message-box h1 {
+    font-size: 3em;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+
+.message-box p {
+    font-size: 1.5em;
+    color: #2f4f4f;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.balloon {
+    width: 80px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 15px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: #444;
+}
+
+.balloon.red {
+    background-color: #ff0000;
+}
+
+.balloon.blue {
+    background-color: #1e90ff;
+}
+
+.balloon.green {
+    background-color: #32cd32;
+}
+
+.balloon.yellow {
+    background-color: #ffd700;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.gradio-container.gradio-container-4-37-1 {
+    width: 100% !important;  /* 让容器占据整个宽度 */
+    height: 100vh !important;  /* 让容器占据整个视口高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;  /* 确保内容垂直居中 */
+}
